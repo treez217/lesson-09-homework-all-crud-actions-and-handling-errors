@@ -4235,3 +4235,189 @@ Processing by ArticlesController#edit as HTML
   Rendered articles/_form.html.erb (1.2ms)
   Rendered articles/edit.html.erb within layouts/application (2.9ms)
 Completed 200 OK in 30ms (Views: 29.2ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/articles/18" for ::1 at 2016-03-13 19:35:59 -0400
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"x0ewPA58hNJQ89zNumHGSF9lwb57dIylgjTh/37BfW1njflzU3kXCKaaSG1k3Xwz1KQM7cbfRS+QNZ4ncDNddA==", "id"=>"18"}
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 18]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 18]]
+  [1m[35m (2.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/articles
+Completed 302 Found in 6ms (ActiveRecord: 3.5ms)
+
+
+Started GET "/articles" for ::1 at 2016-03-13 19:35:59 -0400
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 51ms (Views: 50.0ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/articles/14" for ::1 at 2016-03-13 19:36:03 -0400
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"4Glmja11X8xhXwVxhFrtkOdhtmlS61zjiVL+Rvi3zN5Aoy/C8HDMFpc2kdFa5lfrbKB7Ou9AlWmbU4Ge9kXsxw==", "id"=>"14"}
+  [1m[35mArticle Load (0.1ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 14]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "articles" WHERE "articles"."id" = ?  [["id", 14]]
+  [1m[36m (3.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/articles
+Completed 302 Found in 6ms (ActiveRecord: 3.5ms)
+
+
+Started GET "/articles" for ::1 at 2016-03-13 19:36:03 -0400
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles"
+  Rendered articles/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 18ms (Views: 17.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles/10/edit" for ::1 at 2016-03-13 19:36:05 -0400
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 10]]
+  Rendered articles/_form.html.erb (2.4ms)
+  Rendered articles/edit.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 25ms (Views: 23.9ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/articles/10" for ::1 at 2016-03-13 19:36:18 -0400
+Processing by ArticlesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dPBKlWSsWdRV5qKwy3uSp8uoWhaciezr+p+P+v7fVg7UOgPaOanKDqOPNhAVxyjcQGmXRSEiJWHonvAi8C12Fw==", "article"=>{"title"=>"New Evidence Suggests Early Humans First Used Fire To Impress Friends", "body"=>"KURUMAN, SOUTH AFRICA—Archaeologists excavating a 1.5-million-year-old Homo erectus habitation site this week unearthed the strongest evidence to date that early humans first used fire to impress their friends. “Based on the locations and prevalence of burn marks at the site, we can infer that fire was initially utilized by early humans to show off in front of one another, typically by leaping over a flaming pit or passing their hands quickly back and forth across the flame of a burning log,” said Boston University researcher Benjamin Shostick, adding that the discovery supports the hypothesis that setting a grassy plain ablaze to crack up friends was an important part of hominid culture long before fire was used for cooking and warmth. “The evidence indicates that early man quite possibly vocalized a loud, confident grunt to a gathering of friends and then tossed a fiery piece of wood into the air and attempted to catch it, and oftentimes poked at unsuspecting buddies with the end of a smoldering branch for the group’s amusement.” Researchers also found fossilized footprints in a circle pattern and numerous charred bones, which likely suggest that early man got big laughs after accidentally setting himself on fire."}, "commit"=>"Update Article", "id"=>"10"}
+  [1m[35mArticle Load (0.1ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "articles" SET "title" = ?, "body" = ?, "updated_at" = ? WHERE "articles"."id" = ?  [["title", "New Evidence Suggests Early Humans First Used Fire To Impress Friends"], ["body", "KURUMAN, SOUTH AFRICA—Archaeologists excavating a 1.5-million-year-old Homo erectus habitation site this week unearthed the strongest evidence to date that early humans first used fire to impress their friends. “Based on the locations and prevalence of burn marks at the site, we can infer that fire was initially utilized by early humans to show off in front of one another, typically by leaping over a flaming pit or passing their hands quickly back and forth across the flame of a burning log,” said Boston University researcher Benjamin Shostick, adding that the discovery supports the hypothesis that setting a grassy plain ablaze to crack up friends was an important part of hominid culture long before fire was used for cooking and warmth. “The evidence indicates that early man quite possibly vocalized a loud, confident grunt to a gathering of friends and then tossed a fiery piece of wood into the air and attempted to catch it, and oftentimes poked at unsuspecting buddies with the end of a smoldering branch for the group’s amusement.” Researchers also found fossilized footprints in a circle pattern and numerous charred bones, which likely suggest that early man got big laughs after accidentally setting himself on fire."], ["updated_at", "2016-03-13 23:36:18.460545"], ["id", 10]]
+  [1m[36m (2.5ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/articles/10
+Completed 302 Found in 7ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/articles/10" for ::1 at 2016-03-13 19:36:18 -0400
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[35mArticle Load (0.2ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 10]]
+  Rendered articles/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 48ms (Views: 46.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles" for ::1 at 2016-03-13 19:36:22 -0400
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 21ms (Views: 20.0ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/articles/17" for ::1 at 2016-03-13 19:36:27 -0400
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"CmDxPNwiyUNxxDpOMTHD98OQ9Dx6SG27xB7j+mMSw+GqqrhzgSdamYetru7vjXmMSFE5b8fjpDHWH5wibeDj+A==", "id"=>"17"}
+  [1m[35mArticle Load (0.1ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 17]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "articles" WHERE "articles"."id" = ?  [["id", 17]]
+  [1m[36m (5.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/articles
+Completed 302 Found in 8ms (ActiveRecord: 5.5ms)
+
+
+Started GET "/articles" for ::1 at 2016-03-13 19:36:27 -0400
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles"
+  Rendered articles/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 17ms (Views: 15.8ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/articles/16" for ::1 at 2016-03-13 19:36:30 -0400
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"I4JVgpe9l1SkOEzxSyJUyZXB3dMYRhI3kvVafYufliaDSBzNyrgEjlJR2FGVnu6yHgAQgKXt272A9CWlhW22Pw==", "id"=>"16"}
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 16]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 16]]
+  [1m[35m (2.5ms)[0m  commit transaction
+Redirected to http://localhost:3000/articles
+Completed 302 Found in 5ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/articles" for ::1 at 2016-03-13 19:36:30 -0400
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 19ms (Views: 17.9ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/articles/15" for ::1 at 2016-03-13 19:36:31 -0400
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"M366RHkL8jgiNa/RffJWVVUuMaZNHhe4ruu7++7KCLGTtPMLJA5h4tRcO3GjTuwu3u/89fC13jK86sQj4DgoqA==", "id"=>"15"}
+  [1m[35mArticle Load (0.1ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 15]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "articles" WHERE "articles"."id" = ?  [["id", 15]]
+  [1m[36m (2.6ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/articles
+Completed 302 Found in 6ms (ActiveRecord: 3.1ms)
+
+
+Started GET "/articles" for ::1 at 2016-03-13 19:36:31 -0400
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.3ms)[0m  SELECT "articles".* FROM "articles"
+  Rendered articles/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 25ms (Views: 23.7ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/articles/13" for ::1 at 2016-03-13 19:36:33 -0400
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"TRVYX0pRmAthbNKmQbnKSU4G9IyPvshWDVvyHRFjFHTt3xEQF1QL0ZcFRgafBXAyxcc53zIVAdwfWo3FH5E0bQ==", "id"=>"13"}
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 13]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 13]]
+  [1m[35m (2.7ms)[0m  commit transaction
+Redirected to http://localhost:3000/articles
+Completed 302 Found in 6ms (ActiveRecord: 3.3ms)
+
+
+Started GET "/articles" for ::1 at 2016-03-13 19:36:33 -0400
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.3ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 23ms (Views: 22.0ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/articles/12" for ::1 at 2016-03-13 19:36:34 -0400
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"MlHKPSehXr1TarFWPrCMvuWzRwcr5pNnrHUiITubHWWSm4NyeqTNZ6UDJfbgDDbFbnKKVJZNWu2+dF35NWk9fA==", "id"=>"12"}
+  [1m[35mArticle Load (0.2ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "articles" WHERE "articles"."id" = ?  [["id", 12]]
+  [1m[36m (2.6ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/articles
+Completed 302 Found in 6ms (ActiveRecord: 3.3ms)
+
+
+Started GET "/articles" for ::1 at 2016-03-13 19:36:34 -0400
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.3ms)[0m  SELECT "articles".* FROM "articles"
+  Rendered articles/index.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 29ms (Views: 27.5ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/articles/7" for ::1 at 2016-03-13 19:36:36 -0400
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"fpPWU5T9xnU7TBLAFuH43f62A0y+ZGq6ufv2gvKzKGzeWZ8cyfhVr80lhmDIXUKmdXfOHwPPozCr+ola/EEIdQ==", "id"=>"7"}
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 7]]
+  [1m[35m (2.5ms)[0m  commit transaction
+Redirected to http://localhost:3000/articles
+Completed 302 Found in 5ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/articles" for ::1 at 2016-03-13 19:36:36 -0400
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.3ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 23ms (Views: 21.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles" for ::1 at 2016-03-13 19:36:41 -0400
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles"
+  Rendered articles/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 17ms (Views: 16.7ms | ActiveRecord: 0.2ms)
