@@ -1,0 +1,11 @@
+<h1>Poser Techcrunch Home</h1>
+
+<%=link_to 'Create New Article', new_article_path%>
+
+<%@articles.each do |article| %>
+ 
+<h3>
+  <%=link_to article.title, article_path(article) %>
+ </h3> 
+
+<%end%>
