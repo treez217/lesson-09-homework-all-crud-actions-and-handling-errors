@@ -3,9 +3,11 @@
 <%=link_to 'Create New Article', new_article_path%>
 
 <%@articles.each do |article| %>
- 
-<h3>
-  <%=link_to article.title, article_path(article) %>
- </h3> 
+
+  <table> 
+   <td><%=link_to 'Delete', article_path(article), method: :delete, data: {confirm: 'Yes No'}%></td>
+   <td><%=link_to 'Edit', edit_article_path(article)%></td>
+   <td><%=link_to article.title, article_path(article) %></td> 
+  </table>
 
 <%end%>
